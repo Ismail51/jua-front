@@ -7,7 +7,7 @@ function Navbar() {
     <>
         <nav className="navbar">
           <div className="top">
-          <h1><a href="#home">Juste une aide</a></h1>
+          <h1>Juste une aide</h1>
           </div>
             <ul>
                 <li className="hover"><NavLink to="/recherche">Recherche</NavLink></li>
