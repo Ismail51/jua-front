@@ -1,5 +1,5 @@
 import React from "react"
-import './App.css';
+import './Recherche.css';
 import Recherche from "./components/Recherche";
 import Offres from "./components/Offres";
 import Contact from "./components/Contact";
