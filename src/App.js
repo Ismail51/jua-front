@@ -1,12 +1,15 @@
 import React from "react"
 import './App.css';
-import Navbar from './components/Navbar';
+import Recherche from "./components/Recherche";
+import Offres from "./components/Offres";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Recherche/> */}
+      <Offres/>
     </div>
   );
 }
