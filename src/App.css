@@ -204,7 +204,7 @@ display: flex;
     width: 80px;
  }
 
-/* @media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
     .main-div{
         display: block;
     }
@@ -215,4 +215,4 @@ display: flex;
         display: none;
     }
     
-} */
+} 

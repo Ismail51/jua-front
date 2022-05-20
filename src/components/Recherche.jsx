@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { NavLink } from 'react-router-dom'
 
 export default function Recherche() {
   return (
@@ -34,7 +35,7 @@ export default function Recherche() {
                                 <p>“Je suis a la recherche d’une personne pouvant m’aider a bl Je suis a la recherche d’une personne pouvant m’aider a blaa
                                 Je suis a la recherche d’une personne pouvant m’aider a ba”</p>
                                 <div className="btn">
-                                <button>Voir plus</button>
+                                <NavLink to="/VoirPlus">Voir plus</NavLink>
                                 </div>
                             </div>
                         </div>

@@ -1,16 +1,16 @@
 import React from "react";
 import NavBar from './Navbar'
-import '../App.css'
+import '../voirPlus.css'
 
 
 function VoirPlus() {
   return(
-    <div>
+    <div className="main">
       <NavBar></NavBar>
       <div>
         <div className="offer-top">
-          <img src="" alt="" />
-          <div className="right-info">
+          <img src="./image/jean.jpg" alt="" />
+          <div className="right-info">      
             <p>name</p>
             <p>location</p>
             <p>date inscription</p>
