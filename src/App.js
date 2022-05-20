@@ -3,10 +3,10 @@ import './App.css';
 import Recherche from "./components/Recherche";
 import Offres from "./components/Offres";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import Contact from "./components/Contact";
 import Profil from "./components/profil";
 import ActiveOffres from "./components/activeOffres";
-import Messagerie from "./components/messagerie";
+
 
 import ServicesRendu from "./components/servicesRendu";
 import VoirPlus from "./components/voirPlus";
@@ -19,10 +19,9 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/Profil" element={<Profil />}></Route>
-        <Route path="/ActivesOffres" element={<ActiveOffres />}></Route>
-        <Route path="/Messagerie" element={<Messagerie />}></Route>
+        <Route path="/Offres" element={<Offres />}></Route>
         <Route path="/ServicesRendu" element={<ServicesRendu />}></Route> 
-      
+        <Route path="/Contact" element={<Contact/>}></Route>
         <Route path="/VoirPlus" element={<VoirPlus />}></Route>
         <Route path="/Recherche" element={<Recherche />}></Route>
       </Routes>

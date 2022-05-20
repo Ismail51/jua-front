@@ -10,11 +10,11 @@ function Navbar() {
           <h1><a href="#home">Juste une aide</a></h1>
           </div>
             <ul>
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/recherche">Recherche</NavLink></li>
-                <li><NavLink to="/Messagerie">Message</NavLink></li>
-                <li><NavLink to="/history">History</NavLink></li>
-                <li><NavLink to="/contact">Contact</NavLink></li>
+                <li className="hover"><NavLink to="/recherche">Recherche</NavLink></li>
+                <li className="hover"><NavLink to="/Offres">Offres</NavLink></li>
+                <li className="hover"><NavLink to="/history">History</NavLink></li>
+                <li className="hover"><NavLink to="/contact">Contact</NavLink></li>
+
             </ul>
           <div className="profile">
               <div>

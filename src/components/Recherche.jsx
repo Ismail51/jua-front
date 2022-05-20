@@ -46,7 +46,7 @@ export default function Recherche() {
                                 <p>“Je suis a la recherche d’une personne pouvant m’aider a bla Je suis a la recherche d’une personne pouvant m’aider a bla
                                 Je suis a la recherche d’une personne pouvant m’aider a ba”</p>
                                 <div className="btn">
-                                     <button>Voir plus</button>
+                                    <button>Voir plus</button>
                                 </div>
                             </div>
                         </div> 
