@@ -1,6 +1,6 @@
 import React from 'react'
-import '../App.css'
-
+import '../App.css';
+import { NavLink } from 'react-router-dom';
  
 function Navbar() {
   return (
@@ -10,11 +10,11 @@ function Navbar() {
           <h1><a href="#home">Juste une aide</a></h1>
           </div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#recherche">Rechercher</a></li>
-                <li><a href="#message">Message</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/recherche">Recherche</NavLink></li>
+                <li><NavLink to="/Messagerie">Message</NavLink></li>
+                <li><NavLink to="/history">History</NavLink></li>
+                <li><NavLink to="/contact">Contact</NavLink></li>
             </ul>
           <div className="profile">
               <div>
