@@ -2,6 +2,7 @@ import React from "react"
 import './App.css';
 import './offres.css';
 import './Form.css';
+import './Recherche.css';
 import Recherche from "./components/Recherche";
 import Offres from "./components/Offres";
 import Profil from "./components/profil";
