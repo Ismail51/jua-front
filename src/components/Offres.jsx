@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
+import axios from 'axios';
+
 
 export default function Offres() {
+  const [offer, setOffer]= useState([]);
+useEffect(() => {
+   axios.get("http://localhost:3002/offers").then(data =>{
+     console.log(data); 
+     setOffer(data.data);
+   }) 
+}, []);
+
   return (
     <div className="main-div">
         <Navbar/> 

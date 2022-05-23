@@ -11,10 +11,9 @@ function Navbar() {
           </div>
             <ul>
                 <li className="hover"><NavLink to="/recherche">Recherche</NavLink></li>
-                <li className="hover"><NavLink to="/Offres">Offres</NavLink></li>
+                <li className="hover"><NavLink to="/offres">Offres</NavLink></li>
                 <li className="hover"><NavLink to="/history">History</NavLink></li>
-                <li className="hover"><NavLink to="/contact">Contact</NavLink></li>
-
+                <li className="hover"><NavLink to="/form">Form</NavLink></li>
             </ul>
           <div className="profile">
               <div>

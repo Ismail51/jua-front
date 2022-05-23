@@ -1,14 +1,19 @@
 *{
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
 
 .navbar{
     padding: 10px;
     text-align: center;
     line-height: 70px;
-    background-color: #87CFF8;
-    min-width: 20%;
+    background-color: #87cff8;
+    width: 320px;
+    flex-shrink: 0;
     height: 100vh;
+    position: fixed;
 }
 .navbar a:hover{
     background-color:  #EFF3F9;
@@ -18,13 +23,11 @@
    margin-top: 0px;
    
 }
-.top{
 
-}
 .top{
     width: 90%; 
     font-weight: bolder;
-    font-size:1.8rem;
+    font-size: 1.5rem;
     color: black;
     background-color:white;
     border: 1 solid;
@@ -37,12 +40,9 @@
     list-style: none;
 }
 .navbar a {
-    
-    text-decoration: none;
     color: black;
     font-size: 1.5rem;
-    font-weight: bold;
-    
+    font-weight: bold; 
 }
 
 .profile{
@@ -60,6 +60,7 @@ display: flex;
 }
 .main-div{
     display:flex;
+   
 }
 .head-div{
     display: flex; 
@@ -68,11 +69,10 @@ display: flex;
     background-color: #EFF3F9;
     width: 100%;
 }
-.head-div h1{
-    margin-top: 10px;
-    margin-left: 20px;
-    font-size: 3rem;
+.search{
+    margin-left: 320px;
 }
+
 .search-div{
     margin: 70px 0px;  
     display: flex;
@@ -80,9 +80,11 @@ display: flex;
     justify-content: center;
     height: 40px;
     
+    
 }
 .search-div label{
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 2.5rem;
     padding-right: 10px;
  
 }
@@ -91,10 +93,13 @@ display: flex;
     padding-left: 30px;
 }
  #lists{
-    height: 40px;
+     text-align: center;
+    height: 50px;
     width: 60vh;
     border-radius: 20px;
+    font-size: 1.5rem;
 }
+
 .container{
     width: 100%;
     margin-top: 6vh;
@@ -104,6 +109,7 @@ display: flex;
 }
 
 .card-body{
+    padding: 20px;
     height: 30vh;
     width: 80%;
     display: flex;
@@ -136,6 +142,7 @@ display: flex;
    background-color: white;
    padding: 6px; 
    width: 80px;
+   text-decoration: none;
 }
 
 .section-left img{
@@ -213,9 +220,37 @@ display: flex;
     }
     .navbar{
         width: 100%;
+        height: 100px;
     }
-    #profile{
+    .profile, .navbar ul{
         display: none;
+
     }
     
 } 
+@media screen and (max-width: 1122px){
+
+    #lists{
+        width: 100%;
+    }
+    .search-div{
+        display: block;
+    }
+
+   .btn{
+        display: block;
+    }
+    .card-body{
+       line-height: normal;
+    }
+}
+@media screen and (max-width: 500px){
+    .card-body{
+        width: 100%;
+        margin: 10px;
+        padding: 30px;
+     }
+     .search{
+         margin-left: 0;
+     }
+ }
