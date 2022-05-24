@@ -227,6 +227,14 @@ display: flex;
         display: none;
 
     }
+    .card-body{
+        width: 100%;
+        margin: 10px;
+        padding: 30px;
+     }
+     .search{
+         margin-left: 0;
+     }
     
 } 
 @media screen and (max-width: 1122px){
@@ -235,6 +243,10 @@ display: flex;
         margin: 0px;
         display: block;
         padding-top: 127px; 
+    }
+    .search-div label{
+        display: block;
+        margin-left: 20px;
     }
 
     #lists{
@@ -250,13 +262,3 @@ display: flex;
        line-height: normal;
     }
 }
-@media screen and (max-width: 500px){
-    .card-body{
-        width: 100%;
-        margin: 10px;
-        padding: 30px;
-     }
-     .search{
-         margin-left: 0;
-     }
- }
