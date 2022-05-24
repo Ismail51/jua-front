@@ -1,10 +1,12 @@
 import React from 'react'
 import '../Recherche.css';
 import { NavLink } from 'react-router-dom';
-
+import {useContext} from "react"
+import {AppContext} from "../App"
 function Navbar() {
+  const context = useContext(AppContext)
+  console.log(context.user)
   return (
-
     <>
       <nav className="navbar">
         <div className="top">
@@ -14,14 +16,15 @@ function Navbar() {
           <li className="hover"><NavLink to="/recherche">Recherche</NavLink></li>
           <li className="hover"><NavLink to="/Offres">Offres</NavLink></li>
           <li className="hover"><NavLink to="/history">History</NavLink></li>
+          <li className="hover"><NavLink to="/form">Form</NavLink></li>
         </ul>
         <div className="profile">
             <div>
               <img src="./image/jean.jpg" alt="profile" />
             </div>
             <div id="profile">
-              <h2>Jean Paluche</h2>
-              <p>Points: 200</p>
+              <h2>{context.user.firstname} {context.user.lastname}</h2>
+              <p>Points: {context.user.points}</p>
             </div>
           </div>
       </nav>

@@ -26,9 +26,6 @@ export default function(){
                 setRegistered(true)
             })
         }
-
-
-
     }
     return(
         <>

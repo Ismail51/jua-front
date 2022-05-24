@@ -1,10 +1,10 @@
 import axios from "axios"
-import {useState} from 'react'
+import {useContext, useState} from 'react'
 import {Navigate} from 'react-router-dom'
+import {AppContext} from '../App'
 
 export default function  (){
-    const [loggedIn, setLoggedIn] = useState(false)
-
+    const context = useContext(AppContext)
     const submitHandler = (e)=>{
         e.preventDefault()
         const data = e.target
@@ -16,13 +16,13 @@ export default function  (){
             log,    
             ).then(result=>{
                 console.log(result)
-                setLoggedIn(true)
+                context.logUser(result.data)
             })
         }
 
     return(
         <>
-            {loggedIn ? <Navigate to="/" /> : null}
+            {context.log ? <Navigate to="/" /> : null}
             <form onSubmit={submitHandler}>
                 <input type="text" name="email" placeholder="Email"></input>
                 <input  type="password" name="pass2" placeholder="Confirmez le mot de passe"></input>
