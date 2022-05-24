@@ -32,7 +32,7 @@ export default function Recherche() {
                 ok?
                     <div>       
                         <div className="div-option">
-                      <h3>27 result pour menage</h3>
+                            <h3>{offers.length} {offers.length>1?"Offres":"Offre"} </h3>
                         </div>
                         <div className="container">
                         
