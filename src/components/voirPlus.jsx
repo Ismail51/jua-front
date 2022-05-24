@@ -14,6 +14,7 @@ function VoirPlus() {
     axios.get(`http://localhost:3002/offers/${id}`).then(data => {
       setOffer(data.data)
       setOk(true)
+      console.log(data)
     })
   }, [])
 
@@ -26,7 +27,7 @@ function VoirPlus() {
             <div className="offer-top">
               <img src="./image/jean.jpg" alt="" />
               <div className="right-info">
-                <p>Prénom : {offer.created_by.firstnamne}</p>
+                <p>Prénom : {offer.created_by.firstname}</p>
                 <p>Nom : {offer.created_by.lastname}</p>
                 <p>Ville : {offer.created_by.city}</p>
                 <p>Date : {offer.created_by.registered_at}</p>

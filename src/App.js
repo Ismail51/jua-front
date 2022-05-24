@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/Recherche" element={<Recherche />}></Route>
         <Route path="/Profil" element={<Profil />}></Route>
         <Route path="/Offres" element={<Offres />}></Route>
-        <Route path="/ServicesRendu" element={<ServicesRendu />}></Route>
+        {/* <Route path="/ServicesRendu" element={<ServicesRendu />}></Route> */}
         {/* <Route path="/Contact" element={<Contact />}></Route> */}
         <Route path="/VoirPlus/:id" element={<VoirPlus />}></Route>
         <Route path="/Recherche" element={<Recherche />}></Route>
