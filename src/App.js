@@ -8,7 +8,9 @@ import Offres from "./components/Offres";
 import Profil from "./components/profil";
 import Home from "./components/Home";
 import Form from "./components/Form";
+import Register from "./components/register";
 import VoirPlus from "./components/voirPlus";
+import Login from "./components/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -27,6 +29,8 @@ export default function App() {
         <Route path="/VoirPlus/:id" element={<VoirPlus />}></Route>
         <Route path="/Recherche" element={<Recherche />}></Route>
         <Route path="/Form" element={<Form />}></Route> 
+        <Route path="/Register" element={<Register />}></Route> 
+        <Route path="/Login" element={<Login />}></Route> 
       </Routes>
     </BrowserRouter>
 
