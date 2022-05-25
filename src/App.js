@@ -9,9 +9,9 @@ import Offres from "./components/Offres";
 import Profil from "./components/profil";
 import Home from "./components/Home";
 import Form from "./components/Form";
-import Register from "./components/register";
 import VoirPlus from "./components/voirPlus";
 import Login from "./components/Login";
+import Register from "./components/register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createContext } from "react";
 
@@ -31,6 +31,8 @@ export default function App() {
   }
   return (
 
+    <AppContext.Provider value={sendToContext}>
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -40,8 +42,11 @@ export default function App() {
         <Route path="/VoirPlus/:id" element={<VoirPlus />}></Route>
         <Route path="/Recherche" element={<Recherche />}></Route>
         <Route path="/Form" element={<Form />}></Route> 
+        <Route path="/Login" element={<Login />}></Route>
+        <Route path="/Register" element={<Register />}></Route> 
       </Routes>
     </BrowserRouter>
+    </AppContext.Provider>
         
 
   );
