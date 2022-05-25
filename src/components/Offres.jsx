@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import Navbar from './Navbar'
 import axios from 'axios';
-
+import { AppContext } from '../App';
+import { NavLink } from 'react-router-dom';
 
 export default function Offres() {
-  const [offer, setOffer]= useState([]);
+  const context = useContext(AppContext)
+  const [offers, setOffers]= useState([]);
+  const [ok, setOk] = useState(false)
+
 useEffect(() => {
-   axios.get("http://localhost:3002/offers").then(data =>{
+  console.log(`http://localhost:3002/offers/user/${context.user._id}`)
+   axios.get(`http://localhost:3002/offers/user/${context.user._id}`).then(data =>{
      console.log(data); 
-     setOffer(data.data);
+     setOffers(data.data);
+     setOk(true)
    }) 
 }, []);
 
@@ -19,50 +25,33 @@ useEffect(() => {
             <div className="section-left">
                 <img src="./image/jean.jpg" alt="profile"/>
                 <div className="div-left">
-                    <h2>Jean Micheal</h2>
-                    <h4>Address: 19 rue de la reunion</h4>
-                    <p>Inscrit depuis: 2021</p>
+                    <h2>{context.user.firstname} {context.user.lastname}</h2>
+                    <h4>Adresse: {context.user.adress} {context.user.city} {context.user.zipcode} </h4>
+                    <p>Inscrit depuis: {context.user.registered_at} </p>
                 </div>
             </div>
-            {/* <div className="separator"></div> */}
             <div className="section-right">
                 <h1>Offres active</h1>
-              <div className="div-right">
-                  <h3>Jean micheal</h3>
-                  <h4>Menage-3heures</h4>
-                      <p>“Je suis a la recherche d’une personne pouvant m’aider a bl Je suis a la recherche d’une personne pouvant m’aider a blaa
-                        Je suis a la recherche d’une personne pouvant m’aider a ba”</p>
-                      <div className="btn">
-                          <button>Voir plus</button>
-                      </div>
-              </div> 
-              <div className="div-right">
-                  <h3>Jean micheal</h3>
-                  <h4>Menage-3heures</h4>
-                      <p>“Je suis a la recherche d’une personne pouvant m’aider a bl Je suis a la recherche d’une personne pouvant m’aider a blaa
-                        Je suis a la recherche d’une personne pouvant m’aider a ba”</p>
-                      <div className="btn">
-                          <button>Voir plus</button>
-                      </div>
-              </div>
-              <div className="div-right">
-                  <h3>Jean micheal</h3>
-                  <h4>Menage-3heures</h4>
-                      <p>“Je suis a la recherche d’une personne pouvant m’aider a bl Je suis a la recherche d’une personne pouvant m’aider a blaa
-                        Je suis a la recherche d’une personne pouvant m’aider a ba”</p>
-                      <div className="btn">
-                          <button>Voir plus</button>
-                      </div>
-              </div>
-              <div className="div-right">
-                  <h3>Jean micheal</h3>
-                  <h4>Menage-3heures</h4>
-                      <p>“Je suis a la recherche d’une personne pouvant m’aider a bl Je suis a la recherche d’une personne pouvant m’aider a blaa
-                        Je suis a la recherche d’une personne pouvant m’aider a ba”</p>
-                      <div className="btn">
-                          <button>Voir plus</button>
-                      </div>
-              </div> 
+                {
+                  ok?
+                        offers.map(offer=>{
+                            return(
+                                <div className="card-body">
+                                <img src="./image/jean.jpg" alt="profile"/>
+                                <div>
+                                    <h3>{offer.created_by.firstname} {offer.created_by.lastname}</h3>
+                                    <h4>{offer.offerType}-{offer.duration} heures</h4>
+                                    <p>“{offer.description}”</p>
+                                    <div className="btn">
+                                        <button><NavLink to={`/voirPlus/${offer._id}`}>Voir plus</NavLink></button>
+                                    </div>
+                                </div>
+                            </div> 
+                            )
+                        })
+                        :
+                        null
+                    } 
             </div>
         </div>
     </div>

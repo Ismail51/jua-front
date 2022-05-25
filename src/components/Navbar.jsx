@@ -14,9 +14,9 @@ function Navbar() {
         </div>
         <ul>
           <li className="hover"><NavLink to="/recherche">Recherche</NavLink></li>
-          <li className="hover"><NavLink to="/Offres">Offres</NavLink></li>
-          <li className="hover"><NavLink to="/history">History</NavLink></li>
-          <li className="hover"><NavLink to="/form">Form</NavLink></li>
+          <li className="hover"><NavLink to="/Offres">Mes offres</NavLink></li>
+          <li className="hover"><NavLink to="/history">Mon Historique</NavLink></li>
+          <li className="hover"><NavLink to="/form">Nouvelle offre</NavLink></li>
         </ul>
         <div className="profile">
             <div>
@@ -27,7 +27,7 @@ function Navbar() {
               <p>Points: {context.user.points}</p>
             </div>
           </div>
-      </nav>
+         </nav>
     </>
   )
 }
