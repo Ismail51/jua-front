@@ -11,7 +11,11 @@ button{
   color: white;
 }
 
-.navbar {
+body{
+    position: relative;
+    
+}
+.navbar{
     padding: 10px;
     text-align: center;
     line-height: 70px;
@@ -38,8 +42,8 @@ button{
 .top h1{
     margin-left: 15px;
     background-color: #eeb711;
-    color: black;
 }
+
 
 .navbar ul {
     
@@ -70,12 +74,13 @@ button{
     margin-right: 20px;
 }
 
-.search {
-    width: 100%;
+.search{
+    width: 80%;
+    padding-left: 300px;
 }
-
-.main-div {
-    display: flex;
+.main-div{
+    display:flex;
+    justify-content: space-between;
 }
 
 .head-div {

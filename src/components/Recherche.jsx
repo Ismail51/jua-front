@@ -14,17 +14,25 @@ export default function Recherche() {
             setOk(true)
         })
     }, [])
+
+    const search = (e)=>{
+        console.log("sfvsd",e.target.value);
+        axios.get(`http://localhost:3002/offers/type/${e.target.value}`).then(data=>(
+            setOffers(data.data)
+        ))
+    }
+
   return (
     <div className="main-div">
             <Navbar/>
                 <div className="search">
                     <div className="search-div">
                         <label htmlFor="lists">Liste des taches</label>
-                            <select id="lists">
+                            <select onChange={search} id="lists">
                             <option  disabled selected value> -- select an option -- </option>
                             <option value="menage">Menage</option>
                             <option value="demanage">Demenage</option>
-                            <option value="informatiqe">Informatique</option>
+                            <option value="informatique">Informatique</option>
                             <option value="accompagne">Accompagne</option>
                             </select>
                     </div>

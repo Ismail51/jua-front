@@ -1,0 +1,9 @@
+.history-main{
+  margin-left: 60vh;
+  background-color: red;
+}
+
+.history{
+  display: flex;
+  background-color: blue;
+}

@@ -27,7 +27,7 @@ function Navbar() {
               <p>Points: {context.user.points}</p>
             </div>
           </div>
-      </nav>
+         </nav>
     </>
   )
 }
