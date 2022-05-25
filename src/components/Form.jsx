@@ -2,19 +2,23 @@ import React from 'react'
 import Navbar from './Navbar'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import {useContext} from "react"
+import {AppContext} from "../App"
 
 
 export default function Form() {
-  
+  const context = useContext(AppContext)
+
     const { register, handleSubmit, formState} = useForm();
     const { errors } = formState;
     const onSubmit = (data) => {
         const newOffer = {
-          created_by: "628de23a3d8287c80c87506c",
+          created_by: context.user._id,
           description: data.description,
           offerType : data.service,
           is_active : true
         }
+        console.log(context)
         axios.post("http://localhost:3002/offers", newOffer).then(info => {
           console.log(info)
         }) 
