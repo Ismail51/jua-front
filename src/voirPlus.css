@@ -4,6 +4,14 @@
     height: 100vh;
 }
 
+.offer{
+    /* background:red; */
+    margin-left:320px;
+    width:100%;
+}
+.offer a{
+    color:white;
+}
 .offer-top{
     /* background-color: yellow; */
     display: flex;

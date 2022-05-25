@@ -23,7 +23,7 @@ function VoirPlus() {
       <NavBar></NavBar>
       {
         ok ?
-          <div>
+          <div className="offer">
             <div className="offer-top">
               <img src="./image/jean.jpg" alt="" />
               <div className="right-info">
@@ -39,8 +39,8 @@ function VoirPlus() {
                 <p>{offer.description}</p>
               </div>
               <div className="offer-btn">
-                <button><NavLink to="/recherche">return</NavLink></button>
-                <button>accept</button>
+                <button><NavLink to="/recherche">Retour au offres</NavLink></button>
+                <button>Accepter l' offre</button>
               </div>
             </div>
           </div>
