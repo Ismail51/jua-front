@@ -28,12 +28,12 @@ button{
 }
 
 
-.top {
-    width: 90%;
+.top{
+    width: 90%; 
     font-weight: bolder;
-    font-size: 1rem;
-    border: 1 solid;
-   
+    font-size: 1.5rem;
+    color: black;
+    background-color: #003450;
 }
 .top h1{
     margin-left: 15px;
@@ -144,9 +144,7 @@ button{
     margin-left: 20px;
     border-radius: 90px;
 }
-
-
-.card-body p {
+.card-body p{
     width: 70%;
 }
 
@@ -156,12 +154,13 @@ button{
     margin-right: 30px;
 }
 
-.card-body button {
-    border-radius: 15px;
-    border: none;
-    background-color: white;
-    padding: 6px;
-    width: 80px;
+.card-body button{
+   border-radius: 15px;
+   border: none;
+   background-color: white;
+   padding: 6px; 
+   width: 80px;
+
 }
 
 

@@ -53,13 +53,12 @@ export default function Recherche() {
                             )
                         })
                     }
-
-
                         </div>
                     </div>
                 :null
             }
         </div>
+
     </div>
     
   )
