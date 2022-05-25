@@ -1,60 +1,4 @@
-/* *{
-    margin: 0;
-}
-a{
-    text-decoration: none;
-}
 
-.navbar{
-    padding: 10px;
-    text-align: center;
-    line-height: 70px;
-    background-color: #123c69;
-    color: white;
-    width: 320px;
-    flex-shrink: 0;
-    height: 100vh;
-    position: fixed;
-}
-.navbar a:hover{
-    background-color:  #EFF3F9;
-}
-
-.navbar h1{
-   margin-top: 0px;
-   
-}
-
-.top{
-    width: 90%; 
-    font-weight: bolder;
-    font-size: 1.5rem;
-    color: black;
-    background-color: #edc747;
-    border: 1 solid;
-    border-radius: 20px;
-
-}
-.navbar ul{
-    display: inline;
-    list-style: none;
-}
-.navbar a {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold; 
-}
-
-.profile{
-display: flex;
- margin-top: 30%; 
-}
-.profile img{
-    height: 100px;
-    width: 100px;
-    border-radius: 90px;
-    margin-right: 20px;
-} */
 .search{
     width: 100%;
 }
@@ -78,7 +22,6 @@ display: flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-left: 200px; */
 
 }
 .search-div label{
@@ -101,23 +44,25 @@ display: flex;
 
 .container{
     width: 100%;
-    margin-top: 6vh;
+    /* margin-top: 6vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-left: 150px; */
+    margin: 20px;
 }
 
 .card-body{
     padding: 20px;
-    height: 30vh;
-    width: 80%;
     display: flex;
     background-color: #EFF3F9;
-    align-items: center;
     justify-content: center;
     line-height: 2rem;
     margin-bottom: 50px;
+    word-break: break-all;
+    margin-left: 20px;
+    box-shadow: 0px 0px 10px 3px#00345030;
+    width: 80%;
+    border-radius: 10px;
 }
 .card-body img{
     height: 100px;
@@ -126,10 +71,18 @@ display: flex;
     margin-left: 60px;
     border-radius: 90px;
 }
-
-
-.card-body p{
+.card-info{
     width: 70%;
+
+}
+.card-info p{
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
 }
 .btn{
     display: flex;
@@ -139,14 +92,13 @@ display: flex;
 .card-body button{
    border-radius: 15px;
    border: none;
-   background-color: #04AA6D;
    padding: 6px; 
-   width: 80px;
    text-decoration: none;
 }
 .card-body a{
     color: white;
 }
+
 
 
  @media screen and (max-width: 768px) {

@@ -14,6 +14,7 @@ export default function Recherche() {
             setOk(true)
         })
     }, [])
+   
   return (
     <div className="main-div">
             <Navbar/>
@@ -41,7 +42,7 @@ export default function Recherche() {
                             return(
                                 <div className="card-body">
                                 <img src="./image/jean.jpg" alt="profile"/>
-                                <div>
+                                <div className="card-info">
                                     <h3>{offer.created_by.firstname} {offer.created_by.lastname}</h3>
                                     <h4>{offer.offerType}-{offer.duration} heures</h4>
                                     <p>“{offer.description}”</p>

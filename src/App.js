@@ -31,6 +31,7 @@ export default function App() {
   }
   return (
 
+    <AppContext.Provider value={sendToContext}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -40,9 +41,11 @@ export default function App() {
         <Route path="/VoirPlus/:id" element={<VoirPlus />}></Route>
         <Route path="/Recherche" element={<Recherche />}></Route>
         <Route path="/Form" element={<Form />}></Route> 
+        <Route path="/register" element={<Register />}></Route> 
+        <Route path="/login" element={<Login />}></Route> 
       </Routes>
     </BrowserRouter>
-        
+    </AppContext.Provider>
 
   );
 }

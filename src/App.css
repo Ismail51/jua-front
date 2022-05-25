@@ -10,9 +10,14 @@ button{
   background-color: #04AA6D !important;
   color: white;
 }
+button a{
+    background-color: #04AA6D !important;
+    color: white;
+  }
+
 
 .navbar {
-    padding: 10px;
+    /* padding: 10px; */
     text-align: center;
     line-height: 70px;
     background-color:#003450;
@@ -36,9 +41,9 @@ button{
     background-color: #003450;
 }
 .top h1{
-    margin-left: 15px;
+    width: 320px;
     background-color: #eeb711;
-    color: black;
+    color: white;
 }
 
 .navbar ul {
@@ -69,101 +74,6 @@ button{
     border-radius: 90px;
     margin-right: 20px;
 }
-
-.search {
-    width: 100%;
-}
-
-.main-div {
-    display: flex;
-}
-
-.head-div {
-    display: flex;
-    height: 150px;
-    display: flex;
-    background-color: #EFF3F9;
-    width: 100%;
-}
-
-.head-div h1 {
-    margin-top: 10px;
-    margin-left: 20px;
-    font-size: 3rem;
-}
-
-.search-div {
-    margin: 70px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-
-}
-
-.search-div label {
-    font-size: 1.5rem;
-    padding-right: 10px;
-
-}
-
-.div-option {
-    padding-top: 30px;
-    padding-left: 30px;
-}
-
-#lists {
-    height: 40px;
-    width: 60vh;
-    border-radius: 20px;
-}
-
-.container {
-    width: 100%;
-    margin-top: 6vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card-body {
-    height: 30vh;
-    width: 80%;
-    display: flex;
-    background-color: #EFF3F9;
-    align-items: center;
-    justify-content: center;
-    line-height: 2rem;
-    margin-bottom: 50px;
-}
-
-.card-body img {
-    height: 100px;
-    width: 100px;
-    margin-right: 60px;
-    margin-left: 20px;
-    border-radius: 90px;
-}
-.card-body p{
-    width: 70%;
-}
-
-.btn {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 30px;
-}
-
-.card-body button{
-   border-radius: 15px;
-   border: none;
-   background-color: white;
-   padding: 6px; 
-   width: 80px;
-
-}
-
-
 @media screen and (max-width: 768px) {
     .main-div {
         display: block;
