@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
 }
 a{
@@ -9,7 +9,8 @@ a{
     padding: 10px;
     text-align: center;
     line-height: 70px;
-    background-color: #87cff8;
+    background-color: #123c69;
+    color: white;
     width: 320px;
     flex-shrink: 0;
     height: 100vh;
@@ -29,17 +30,17 @@ a{
     font-weight: bolder;
     font-size: 1.5rem;
     color: black;
-    background-color:white;
+    background-color: #edc747;
     border: 1 solid;
-    border-radius: 15px;
-    margin-top: 15px;
+    border-radius: 20px;
+
 }
 .navbar ul{
     display: inline;
     list-style: none;
 }
 .navbar a {
-    color: black;
+    color: white;
     font-size: 1.5rem;
     font-weight: bold; 
 }
@@ -53,7 +54,7 @@ display: flex;
     width: 100px;
     border-radius: 90px;
     margin-right: 20px;
-}
+} */
 .search{
     width: 100%;
 }
@@ -77,8 +78,7 @@ display: flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 40px; */
-    margin-left: 200px;
+    /* margin-left: 200px; */
 
 }
 .search-div label{
@@ -139,80 +139,15 @@ display: flex;
 .card-body button{
    border-radius: 15px;
    border: none;
-   background-color: white;
+   background-color: #04AA6D;
    padding: 6px; 
    width: 80px;
    text-decoration: none;
 }
+.card-body a{
+    color: white;
+}
 
-.section-left img{
-    height: 100px;
-    width: 100px;
-    margin-top: 40px;
-    margin-right: 50px;
-    margin-left: 50px;
-    border-radius: 90px;
-}
-.separator{
-    width: 6px;
-    background-color: black;
-    height:90%;
-    /* margin-left: 50px; */
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-.section-body{
-    display: flex;
-}
-.div-left{
-    margin-left: 40px;
-}
-.section-right h1{
-    margin-top: 20px;
-}
-.section-right h2{
-    margin-top: 20px;
-}
-.section-right{
-    margin-top: 0px;
-    margin-left: 150px;
-
-}
-.div-right{
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: #EFF3F9;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    border: 1px solid black;
-    padding: 10px;
-}
-.div-right img{
-    height: 60px;
-    width: 60px;
-    margin-top: 0;
-    margin-right: 60px;
-    margin-left: 20px;
-    border-radius: 30px;
-}
-.div-right h3{
-    margin-bottom: 5px;
-}
-.div-right p{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-right: 20px;
-}
-.div-right button{
-    border-radius: 15px;
-    border: none;
-    background-color: white;
-    padding: 6px; 
-    width: 80px;
- }
 
  @media screen and (max-width: 768px) {
     .main-div{

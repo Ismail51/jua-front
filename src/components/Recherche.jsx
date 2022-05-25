@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom'
+import axios from 'axios'
 
 export default function Recherche() {
+
+    const [offers, setOffers] = useState([])
+    const [ok, setOk] = useState(false)
+    useEffect(()=>{
+        axios.get('http://localhost:3002/offers').then(data=>{
+            setOffers(data.data)
+            setOk(true)
+        })
+    }, [])
   return (
     <div className="main-div">
             <Navbar/>
@@ -17,50 +27,39 @@ export default function Recherche() {
                             <option value="informatiqe">Informatique</option>
                             <option value="accompagne">Accompagne</option>
                             </select>
-                            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
                     </div>
-                    <div className="div-option">
-                      <h3>27 result pour menage</h3>
-                    </div>
-                    
-                    <div className="container">
-                        
-                        <div className="card-body">
-                            <img src="./image/jean.jpg" alt="profile"/>
-                            <div>
-                                <h3>jean micheal</h3>
-                                <h4>Menage-3heures</h4>
-                                <p>“Je suis a la recherche d’une personne pouvant m’aider a bl Je suis a la recherche d’une personne pouvant m’aider a blaa
-                                Je suis a la recherche d’une personne pouvant m’aider a ba”</p>
-                                <div className="btn">
-                                    <button><NavLink to="/VoirPlus">Voir plus</NavLink></button>
-                                </div>
-                            </div>
+            {
+                ok?
+                    <div>       
+                        <div className="div-option">
+                            <h3>{offers.length} {offers.length>1?"Offres":"Offre"} </h3>
                         </div>
-                        <div className="card-body">
-                            <img src="./image/jean.jpg" alt="profile"/>
-                            <div>
-                                <h3>jean micheal</h3>
-                                <h4>Menage-3heures</h4>
-                                <p>“Je suis a la recherche d’une personne pouvant m’aider a bla Je suis a la recherche d’une personne pouvant m’aider a bla
-                                Je suis a la recherche d’une personne pouvant m’aider a ba”</p>
-                                <div className="btn">
-                                    <button><NavLink to="/VoirPlus">Voir plus</NavLink></button>
+                        <div className="container">
+                        
+                    {
+                        offers.map(offer=>{
+                            return(
+                                <div className="card-body">
+                                <img src="./image/jean.jpg" alt="profile"/>
+                                <div>
+                                    <h3>{offer.created_by.firstname} {offer.created_by.lastname}</h3>
+                                    <h4>{offer.offerType}-{offer.duration} heures</h4>
+                                    <p>“{offer.description}”</p>
+                                    <div className="btn">
+                                        <button><NavLink to={`/voirPlus/${offer._id}`}>Voir plus</NavLink></button>
+                                    </div>
                                 </div>
-                            </div>
-                        </div> 
+                            </div> 
+                            )
+                        })
+                    }
 
+
+                        </div>
                     </div>
-
-
-
-
-
-
-
-
-                </div>
-       
+                :null
+            }
+        </div>
     </div>
     
   )

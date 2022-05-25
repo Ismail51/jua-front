@@ -18,3 +18,11 @@ input[type=text], select, textarea {
   border-radius: 4px;
   cursor: pointer;
 }
+@media screen and (max-width: 500) {
+
+  .container, form{
+    display: block;
+  
+    
+  }
+}
