@@ -19,6 +19,7 @@ export default function  (){
                 context.logUser(result.data)
             })
         }
+        console.log(context)
 
     return(
         <>

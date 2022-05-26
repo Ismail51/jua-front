@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import axios from 'axios';
 import {useContext} from "react"
 import {AppContext} from "../App"
+// import "../Form.css";
 
 
 export default function Form() {
@@ -44,7 +45,7 @@ export default function Form() {
                 <br></br>
                 <label htmlFor="message">Message</label>
                 
-                <textarea {...register('description', {required: 'You need to enter the description' })} id="description"  name="description" placeholder="ecrite ici.." style={{height:"300px"}}></textarea>
+                <textarea {...register('description', {required: 'You need to enter the description' })} id="description"  name="description" placeholder="Entrez une description pour l'offre" style={{height:"300px"}}></textarea>
                 <p> {errors.description && errors.description.message} </p>
                 <input type="submit" value="Submit"/>
 

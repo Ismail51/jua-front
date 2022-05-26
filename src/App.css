@@ -10,6 +10,11 @@ button{
   background-color: #04AA6D !important;
   color: white;
 }
+button a{
+    background-color: #04AA6D !important;
+    color: white;
+  }
+
 
 body{
     position: relative;
@@ -40,7 +45,7 @@ body{
     background-color: #003450;
 }
 .top h1{
-    margin-left: 15px;
+    width: 320px;
     background-color: #eeb711;
 }
 
