@@ -14,7 +14,7 @@ function Navbar() {
         </div>
         <ul>
           <li className="hover"><NavLink to="/recherche">Recherche</NavLink></li>
-          <li className="hover"><NavLink to="/Offres">Mes offres</NavLink></li>
+          <li className="hover"><NavLink to="/Offres">Mes annonces</NavLink></li>
           <li className="hover"><NavLink to="/history">Mon Historique</NavLink></li>
           <li className="hover"><NavLink to="/form">Nouvelle offre</NavLink></li>
         </ul>

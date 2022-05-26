@@ -9,17 +9,26 @@ export default function Recherche() {
     const [offers, setOffers] = useState([])
     const [ok, setOk] = useState(false)
     useEffect(()=>{
+        getAlloffers()
+    }, [])
+
+    const getAlloffers = ()=>{
         axios.get('http://localhost:3002/offers').then(data=>{
             setOffers(data.data)
             setOk(true)
         })
-    }, [])
+    }
 
     const search = (e)=>{
+        if(e.target.value=="tout"){
+            getAlloffers()
+        }
+        else{
         console.log("sfvsd",e.target.value);
         axios.get(`http://localhost:3002/offers/type/${e.target.value}`).then(data=>(
             setOffers(data.data)
         ))
+        }
     }
 
   return (
@@ -30,6 +39,7 @@ export default function Recherche() {
                         <label htmlFor="lists">Liste des taches</label>
                             <select onChange={search} id="lists">
                             <option  disabled selected value> -- select an option -- </option>
+                            <option value="tout">Tout</option>
                             <option value="menage">Menage</option>
                             <option value="demanage">Demenage</option>
                             <option value="informatique">Informatique</option>

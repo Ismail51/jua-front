@@ -45,7 +45,7 @@ function VoirPlus() {
             </div>
             <div className="offer-bottom">
               <div className="offer-description">
-                <h3>description</h3>
+                <h3>Description</h3>
                 <p>{offer.description}</p>
               </div>
               <div className="offer-btn">

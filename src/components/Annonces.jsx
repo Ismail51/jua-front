@@ -23,15 +23,15 @@ useEffect(() => {
         <Navbar/> 
         <div className="section-body" >
             <div className="section-left">
-                <img src="./image/jean.jpg" alt="profile"/>
+                {/* <img src="./image/jean.jpg" alt="profile"/>
                 <div className="div-left">
                     <h2>{context.user.firstname} {context.user.lastname}</h2>
                     <h4>Adresse: {context.user.adress} {context.user.city} {context.user.zipcode} </h4>
                     <p>Inscrit depuis: {context.user.registered_at} </p>
-                </div>
+                </div> */}
             </div>
             <div className="section-right">
-                <h1>Offres active</h1>
+                <h1>Mes annonces</h1>
                 {
                   ok?
                         offers.map(offer=>{

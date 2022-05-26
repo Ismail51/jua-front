@@ -1,13 +1,12 @@
 import React, { useState } from "react"
 import './App.css';
-import './offres.css';
+import './annonces.css';
 import './Form.css';
 import './Recherche.css';
 import './History.css';
 
 import Recherche from "./components/Recherche";
-import Offres from "./components/Offres";
-import Profil from "./components/profil";
+import Offres from "./components/Annonces";
 import Home from "./components/Home";
 import Form from "./components/Form";
 import History from "./components/History";
@@ -37,7 +36,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/Recherche" element={<Recherche />}></Route>
-          <Route path="/Profil" element={<Profil />}></Route>
           <Route path="/Offres" element={<Offres />}></Route>
           <Route path="/VoirPlus/:id" element={<VoirPlus />}></Route>
           <Route path="/Recherche" element={<Recherche />}></Route>
