@@ -16,9 +16,9 @@ export default function Form() {
           created_by: context.user._id,
           description: data.description,
           offerType : data.service,
+          duration:data.duration,
           is_active : true
         }
-        console.log(context)
         axios.post("http://localhost:3002/offers", newOffer).then(info => {
           console.log(info)
         }) 
@@ -38,7 +38,10 @@ export default function Form() {
                 <option value="informatique">Informatique</option>
                 <option value="demanage">Demanagement</option>
                 </select>
-
+                <label htmlFor="duration">Durée en heure</label>
+                <br></br>
+                <input {...register('duration', {required: 'Vous devez entrer une durée' })} max="24" min="1" type="number" id="duration" name="duration" />
+                <br></br>
                 <label htmlFor="message">Message</label>
                 
                 <textarea {...register('description', {required: 'You need to enter the description' })} id="description"  name="description" placeholder="ecrite ici.." style={{height:"300px"}}></textarea>

@@ -20,7 +20,7 @@ function Navbar() {
         </ul>
         <div className="profile">
             <div>
-              <img src="./image/jean.jpg" alt="profile" />
+              <img src={"/image/"+context.user.profile_picture} alt="profile" />
             </div>
             <div id="profile">
               <h2>{context.user.firstname} {context.user.lastname}</h2>
