@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { useContext } from "react"
 import { AppContext } from "../App"
-import "../Form.css";
+import { NavLink } from "react-router-dom";
 
 
 export default function Form() {
@@ -47,8 +47,8 @@ export default function Form() {
 
           <textarea {...register('description', { required: 'You need to enter the description' })} id="description" name="description" placeholder="Entrez une description pour l'offre" style={{ height: "300px" }}></textarea>
           <p> {errors.description && errors.description.message} </p>
+          <NavLink to={"/offres"}></NavLink>
           <input type="submit" value="Submit" />
-
         </form>
       </div>
     </div>

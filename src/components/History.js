@@ -29,7 +29,7 @@ function History() {
                 return (
                   <div className="card-body">
                     <img src="./image/jean.jpg" alt="profile" />
-                    <div>
+                    <div className="card-left">
                       <h3>{offer.created_by.firstname} {offer.created_by.lastname}</h3>
                       <h4>{offer.offerType}-{offer.duration} heures</h4>
                       <p>“{offer.description}”</p>
