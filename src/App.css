@@ -21,7 +21,6 @@ body{
     
 }
 .navbar{
-    padding: 10px;
     text-align: center;
     line-height: 70px;
     background-color:#003450;
@@ -38,7 +37,7 @@ body{
 
 
 .top{
-    width: 90%; 
+    width: 100%; 
     font-weight: bolder;
     font-size: 1.5rem;
     color: black;
@@ -101,27 +100,6 @@ body{
     margin-left: 20px;
     font-size: 3rem;
 }
-
-.search-div {
-    margin: 70px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-
-}
-
-.search-div label {
-    font-size: 1.5rem;
-    padding-right: 10px;
-
-}
-
-.div-option {
-    padding-top: 30px;
-    padding-left: 30px;
-}
-
 #lists {
     height: 40px;
     width: 60vh;
@@ -134,17 +112,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.card-body {
-    height: 30vh;
-    width: 80%;
-    display: flex;
-    background-color: #EFF3F9;
-    align-items: center;
-    justify-content: center;
-    line-height: 2rem;
-    margin-bottom: 50px;
 }
 
 .card-body img {
@@ -175,16 +142,22 @@ body{
 
 
 @media screen and (max-width: 768px) {
+    .navbar{
+        margin: 0;
+    }
+    .navbar .top{
+        margin: 0;
+    }
     .main-div {
         display: block;
-    }
-
-    .navbar {
-        width: 50%;
     }
 
     #profile {
         display: none;
     }
-
+    .top h1{
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
 }

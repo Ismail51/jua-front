@@ -55,6 +55,9 @@
     padding: 6px; 
     width: 80px;
  }
+ .card-left{
+     width: 70%;
+ }
 
  @media screen and (max-width: 768px) {
     .main-div{
