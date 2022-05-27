@@ -1,13 +1,13 @@
-.section-body{
+.section-body {
     display: flex;
     margin-left: 320px;
 }
 
-.section-left{
+.section-left {
     margin-left: 100px;
 }
 
-.section-left img{
+.section-left img {
     height: 100px;
     width: 100px;
     margin-top: 40px;
@@ -16,19 +16,21 @@
     border-radius: 90px;
 }
 
-.section-right{
+.section-right {
     margin-left: 90px;
     width: 1000px;
 }
 
-.section-right h1{
+.section-right h1 {
     margin-top: 80px;
     margin-bottom: 60px;
 }
-.section-right h2{
+
+.section-right h2 {
     margin-top: 20px;
 }
-.div-right{
+
+.div-right {
     margin-top: 30px;
     margin-left: 20px;
     box-shadow: 0px 0px 10px 3px#00345030;
@@ -41,61 +43,76 @@
     border-radius: 10px;
 }
 
-.div-right h3{
+.div-right h3 {
     margin-bottom: 5px;
 }
-.div-right p{
+
+.div-right p {
     margin-top: 20px;
     margin-bottom: 10px;
     margin-right: 20px;
 }
-.div-right button{
+
+.div-right button {
     border-radius: 15px;
     border: none;
-    padding: 6px; 
+    padding: 6px;
     width: 80px;
- }
+}
 
- @media screen and (max-width: 768px) {
-    .main-div{
+.form {
+    border: 4px solid black
+}
+
+@media screen and (max-width: 768px) {
+    .main-div {
         margin: 0;
         padding: 0;
         display: block;
 
     }
-    .navbar{
+
+    .navbar {
         width: 100%;
         height: 100px;
     }
-    .profile, .navbar ul{
+
+    .profile,
+    .navbar ul {
         display: none;
     }
-    .section-body{
+
+    .section-body {
         margin: 0;
         display: block;
     }
-    .section-left{
+
+    .section-left {
         display: block;
     }
-    .section-left img{
+
+    .section-left img {
         display: none;
     }
-    .seperator{
+
+    .seperator {
         display: none;
     }
-    .section-right{
+
+    .section-right {
         display: block;
-        width: 100%; 
+        width: 100%;
     }
-    .div-left{
-        
-        display:block;
+
+    .div-left {
+
+        display: block;
     }
-    .div-right{
-        
-        display:block;
+
+    .div-right {
+
+        display: block;
     }
 }
-@media screen and (max-width: 1122px){
-  
-}
+
+@media screen and (max-width: 1122px) {}

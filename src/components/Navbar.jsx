@@ -1,8 +1,8 @@
 import React from 'react'
 import '../Recherche.css';
 import { NavLink } from 'react-router-dom';
-import {useContext} from "react"
-import {AppContext} from "../App"
+import { useContext } from "react"
+import { AppContext } from "../App"
 function Navbar() {
   const context = useContext(AppContext)
   console.log(context.user)
@@ -19,15 +19,15 @@ function Navbar() {
           <li className="hover"><NavLink to="/form">Nouvelle offre</NavLink></li>
         </ul>
         <div className="profile">
-            <div>
-              <img src={"/image/"+context.user.profile_picture} alt="profile" />
-            </div>
-            <div id="profile">
-              <h2>{context.user.firstname} {context.user.lastname}</h2>
-              <p>Points: {context.user.points}</p>
-            </div>
+          <div>
+            <img src={"/image/" + context.user.profile_picture} alt="profile" />
           </div>
-         </nav>
+          <div id="profile">
+            <h2>{context.user.firstname} {context.user.lastname}</h2>
+            <p>Points: {context.user.points}</p>
+          </div>
+        </div>
+      </nav>
     </>
   )
 }

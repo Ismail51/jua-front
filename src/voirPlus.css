@@ -1,24 +1,25 @@
-
-.main{
+.main {
     display: flex;
     height: 100vh;
 }
 
-.offer{
+.offer {
     /* background:red; */
-    margin-left:300px;  
-    width:80%;
+    margin-left: 300px;
+    width: 80%;
 }
-.offer a{
-    color:white;
+
+.offer a {
+    color: white;
 }
-.offer-top{
+
+.offer-top {
     /* background-color: yellow; */
     display: flex;
     margin-left: 70px;
 }
 
-.offer-top img{
+.offer-top img {
     height: 180px;
     width: 180px;
     border-radius: 100px;
@@ -26,28 +27,28 @@
     margin-top: 50px;
 }
 
-.right-info{
+.right-info {
     margin-left: 50px;
     margin-top: 70px;
     font-size: 20px;
     padding: 10px;
 }
 
-.right-info p{
+.right-info p {
     padding: 5px;
 }
 
-.offer-bottom{
+.offer-bottom {
     margin-left: 100px;
     margin-top: 0px;
     font-size: 20px;
 }
 
-.offer-description{
+.offer-description {
     margin: 70px;
 }
 
-.offer-btn{
+.offer-btn {
     display: flex;
     width: 70%;
     justify-content: space-between;
@@ -55,7 +56,7 @@
     margin-left: 150px;
 }
 
-.offer-btn button{
+.offer-btn button {
     display: flex;
     margin: 100px;
     justify-content: center;
@@ -64,52 +65,61 @@
     height: 50px;
     width: 450px;
     font-size: 20px;
-    background-color: #87CFF8;
+    background-color: #0c181f;
 }
 
-@media screen and (max-width: 1122px){
-    
-    .search-div{
+
+@media screen and (max-width: 1122px) {
+
+    .search-div {
         margin: 0px;
         display: block;
-        padding-top: 127px; 
+        padding-top: 127px;
     }
-    #lists{
+
+    #lists {
         width: 100%;
         display: block;
     }
-    .btn{
+
+    .btn {
         display: block;
         margin: 10px;
     }
-    .card-body{
+
+    .card-body {
         line-height: normal;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .main-div{
+    .main-div {
         display: block;
     }
-    .navbar{
+
+    .navbar {
         width: 100%;
         height: 100px;
     }
-    .profile, .navbar ul{
-        display: none;
-    }
-    .offer-top img{
-        display: none;
-    }
-} 
 
-@media screen and (max-width: 500px){
-    .card-body{
+    .profile,
+    .navbar ul {
+        display: none;
+    }
+
+    .offer-top img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card-body {
         width: 100%;
         margin: 10px;
         padding: 30px;
-     }
-     .search{
-         margin-left: 0;
-     }
- }
+    }
+
+    .search {
+        margin-left: 0;
+    }
+}
