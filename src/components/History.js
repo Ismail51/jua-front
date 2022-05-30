@@ -22,13 +22,13 @@ function History() {
       <Navbar></Navbar>
       <div className="section-body" >
         <div className="section-right">
-          <h1>Historique</h1>
+          <h1>Historique des offres acceptées</h1>
           {
             ok ?
               offers.map(offer => {
                 return (
-                  <div className="card-body">
-                    <img src="./image/jean.jpg" alt="profile" />
+                  <div className="card-body accepted">
+                    <img src="./image/aide.jpeg" alt="profile" />
                     <div className="card-left">
                       <h3>{offer.created_by.firstname} {offer.created_by.lastname}</h3>
                       <h4>{offer.offerType}-{offer.duration} heures</h4>

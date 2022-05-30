@@ -15,6 +15,7 @@ function VoirPlus() {
   const [accepted, setAccepted] = useState(false)
   const context = useContext(AppContext)
   useEffect(() => {
+    console.log(context.user)
     axios.get(`http://localhost:3002/offers/${id}`).then(data => {
       setOffer(data.data)
       setOk(true)
@@ -30,20 +31,26 @@ function VoirPlus() {
       setAccepted(true)
     })
   }
-
+const getDate = (date)=>{
+  const ok = new Date(date)
+  return ok.toLocaleDateString("fr-FR")
+    console.log('okkkk',ok.toLocaleDateString("fr-FR"))
+}
   return (
     <div className="main">
       <NavBar></NavBar>
       {
         ok ?
           <div className="offer">
+                        {offer.accepted_by ? <div className="msg-top">L'offre a déja été acceptée</div>: null}
+
             <div className="offer-top">
-              <img src="./image/jean.jpg" alt="" />
+              <img src="/image/aide.jpeg" alt="" />
               <div className="right-info">
                 <p>Prénom : {offer.created_by.firstname}</p>
                 <p>Nom : {offer.created_by.lastname}</p>
                 <p>Ville : {offer.created_by.city}</p>
-                <p>Date : {offer.created_by.registered_at}</p>
+                <p>Date : {getDate(offer.created_at)}</p>
               </div>
             </div>
             <div className="offer-bottom">
@@ -54,9 +61,9 @@ function VoirPlus() {
               </div>
               </div>
               <div className="offer-btn">
-                <button><NavLink to="/recherche">Retour aux offres</NavLink></button>
+                <button><NavLink to="/recherche">Retour</NavLink></button>
                 {accepted ? <Navigate to="/recherche" /> : null}
-                {offer.accepted_by ? "l'offre à déja été acceptée" : <button onClick={acceptOffer}>Accepter l'offre</button>}
+                {offer.accepted_by ? null: <button onClick={acceptOffer}>Accepter</button>}
               </div>
 
             </div>
