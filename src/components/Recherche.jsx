@@ -38,12 +38,15 @@ export default function Recherche() {
                     <div className="search-div">
                         <label htmlFor="lists">Liste des taches</label>
                             <select onChange={search} id="lists">
-                            <option  disabled selected value> -- select an option -- </option>
+                            <option  disabled selected value>Rechercher</option>
                             <option value="tout">Tout</option>
-                            <option value="menage">Menage</option>
-                            <option value="demanage">Demenage</option>
+                            <option value="menage">Ménage</option>
+                            <option value="demenagement">Déménagement</option>
                             <option value="informatique">Informatique</option>
-                            <option value="accompagne">Accompagne</option>
+                            <option value="accompagne">Accompagnement</option>
+                            <option value="bricolage">Bricolage</option>
+                            <option value="transport">Transport</option>
+                            <option value="course">Course</option>
                             </select>
                     </div>
             {

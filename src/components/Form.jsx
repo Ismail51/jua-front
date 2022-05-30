@@ -2,14 +2,16 @@ import React from 'react'
 import Navbar from './Navbar'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import {useContext} from "react"
+import {useContext, useState} from "react"
 import {AppContext} from "../App"
+import {Navigate} from 'react-router-dom'
 // import "../Form.css";
 
 
 export default function Form() {
   const context = useContext(AppContext)
-
+  const [created, setCreated] = useState(false)
+  const [idOffer, setInfo] = useState({})
     const { register, handleSubmit, formState} = useForm();
     const { errors } = formState;
     const onSubmit = (data) => {
@@ -21,23 +23,31 @@ export default function Form() {
           is_active : true
         }
         axios.post("http://localhost:3002/offers", newOffer).then(info => {
-          console.log(info)
+          console.log(info.data._id)
+          if(info.status ===200){
+            setCreated(true)
+            setInfo(info.data._id)
+          }
         }) 
-        console.log('Faire quelque chose au submit des', data)
       };
     
   return (
     <div className="main-div">
         <Navbar/>
         <div className="container">
+          {created?<Navigate to={`/VoirPlus/${idOffer}`}/>:null}
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <label htmlFor="service">Service</label>
                 <select {...register('service', {required: 'You need to enter the description' })} id="service" name="service">
-                <option  disabled value> -- select an option -- </option>
-                <option value="menage">Menage</option>
-                <option value="informatique">Informatique</option>
-                <option value="demanage">Demanagement</option>
+                <option  disabled value> -- Selectionner  -- </option>
+                            <option value="menage">Ménage</option>
+                            <option value="demenagement">Déménagement</option>
+                            <option value="informatique">Informatique</option>
+                            <option value="accompagne">Accompagnement</option>
+                            <option value="bricolage">Bricolage</option>
+                            <option value="transport">Transport</option>
+                            <option value="course">Course</option>
                 </select>
                 <label htmlFor="duration">Durée en heure</label>
                 <br></br>

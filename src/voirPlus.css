@@ -18,6 +18,12 @@
     margin-left: 70px;
 }
 
+.description-offer{
+    width:90%;
+    padding:1rem;
+    word-wrap: break-word
+    
+}
 .offer-top img{
     height: 180px;
     width: 180px;

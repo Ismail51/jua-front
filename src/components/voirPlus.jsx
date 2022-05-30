@@ -46,7 +46,9 @@ function VoirPlus() {
             <div className="offer-bottom">
               <div className="offer-description">
                 <h3>Description</h3>
+              <div className="description-offer">
                 <p>{offer.description}</p>
+              </div>
               </div>
               <div className="offer-btn">
                 <button><NavLink to="/recherche">Retour au offres</NavLink></button>
