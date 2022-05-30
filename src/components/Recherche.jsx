@@ -49,16 +49,36 @@ export default function Recherche() {
                             <option value="course">Course</option>
                             </select>
                     </div>
-            {
-                ok?
-                    <div>       
-                        <div className="div-option">
-                            <h3>{offers.length} {offers.length>1?"Offres":"Offre"} </h3>
+                    {
+                    ok ?
+                        <div>
+                            <div className="div-option">
+                                <h3>{offers.length} {offers.length > 1 ? "Offres" : "Offre"} </h3>
+                            </div>
+                            <div className="container">
+
+                                {
+                                    offers.map(offer => {
+                                        return (
+                                            <div className="card-body">
+                                                <img src="./image/jean.jpg" alt="profile" />
+                                                <div className="card-info">
+                                                    <h3>{offer.created_by.firstname} {offer.created_by.lastname}</h3>
+                                                    <h4>{offer.offerType}-{offer.duration} heures</h4>
+                                                    <p>“{offer.description}”</p>
+                                                    <div className="btn">
+                                                        <button><NavLink to={`/voirPlus/${offer._id}`}>Voir plus</NavLink></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
                         : null
                 }
             </div>
-
         </div>
 
     )
