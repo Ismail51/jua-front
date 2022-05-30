@@ -21,6 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40px;
 
 }
 .search-div label{
@@ -36,14 +37,13 @@
  #lists{
      text-align: center;
     height: 50px;
-    width: 60vh;
     border-radius: 20px;
     font-size: 1.5rem;
 }
 
 .container{
     width: 100%;
-    /* margin-top: 6vh; */
+    margin-top: 6vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,13 +55,15 @@
     display: flex;
     background-color: #EFF3F9;
     justify-content: center;
-    line-height: 2rem;
     margin-bottom: 50px;
     word-break: break-all;
     margin-left: 20px;
     box-shadow: 0px 0px 10px 3px#00345030;
     width: 80%;
     border-radius: 10px;
+    height: 30vh;
+    align-items: center;
+    line-height: 2rem;
 }
 .card-body img{
     height: 100px;
@@ -101,14 +103,7 @@
 
 
  @media screen and (max-width: 768px) {
-    .main-div{
-        display: block;
 
-    }
-    .navbar{
-        width: 100%;
-        height: 100px;
-    }
     .profile, .navbar ul{
         display: none;
 
@@ -119,8 +114,11 @@
         padding: 30px;
      }
      .search{
-         margin-left: 0;
+         padding: 0;
      }
+    .container{
+        width: 100%;
+    }
     
 } 
 @media screen and (max-width: 1122px){

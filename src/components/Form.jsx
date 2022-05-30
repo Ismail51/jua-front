@@ -59,8 +59,12 @@ export default function Form() {
                 <p> {errors.description && errors.description.message} </p>
                 <input type="submit" value="Submit"/>
 
-            </form>
-         </div>
+          <textarea {...register('description', { required: 'You need to enter the description' })} id="description" name="description" placeholder="Entrez une description pour l'offre" style={{ height: "300px" }}></textarea>
+          <p> {errors.description && errors.description.message} </p>
+          <NavLink to={"/offres"}></NavLink>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </div>
   )
 }

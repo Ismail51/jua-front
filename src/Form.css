@@ -20,7 +20,7 @@ input[type=text], select, textarea {
 }
 
 @media screen and (max-width: 768px) {
-  .maindiv{
+  .main-div{
     margin: 0;
    
   }
