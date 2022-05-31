@@ -60,7 +60,7 @@ export default function Recherche() {
                                     offers.map(offer => {
                                         return (
                                             <div className="card-body">
-                                                <img src="/image/aide.jpeg" alt="profile" />
+                                                <img src={"/image/"+offer.created_by.profile_picture} alt="profile" />
                                                 <div className="card-info">
                                                     <h3>{offer.created_by.firstname} {offer.created_by.lastname}</h3>
                                                     <h4>{offer.offerType}-{offer.duration} heures</h4>

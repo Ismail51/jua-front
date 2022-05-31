@@ -43,14 +43,13 @@ const getDate = (date)=>{
         ok ?
           <div className="offer">
             {offer.accepted_by ? <div className="msg-top">L'offre a déja été acceptée</div> : null}
-
             <div className="offer-top">
-              <img src="/image/aide.jpeg" alt="" />
+            <img src={"/image/"+offer.created_by.profile_picture} alt="profile" />
               <div className="right-info">
                 <p>Prénom : {offer.created_by.firstname}</p>
                 <p>Nom : {offer.created_by.lastname}</p>
                 <p>Ville : {offer.created_by.city}</p>
-                <p>Date : {getDate(offer.created_at)}</p>
+                <p>Date : {getDate(offer.date)}</p>
               </div>
             </div>
             <div className="offer-bottom">
