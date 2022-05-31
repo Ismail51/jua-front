@@ -19,13 +19,13 @@
     margin-left: 70px;
 }
 
-.description-offer{
-    width:90%;
-    padding:1rem;
+.description-offer {
+    width: 90%;
+    padding: 1rem;
     word-wrap: break-word
-    
 }
-.offer-top img{
+
+.offer-top img {
     height: 180px;
     width: 180px;
     border-radius: 100px;
@@ -130,10 +130,11 @@
     }
 }
 
-.msg-top{
+.msg-top {
     background: #003450;
-    padding:2rem;
-    color:white;
+    padding: 1.5rem;
+    color: white;
     text-align: end;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    text-align: center;
 }

@@ -7,7 +7,6 @@ import { NavLink, Navigate } from "react-router-dom";
 import { AppContext } from "../App";
 
 
-
 function VoirPlus() {
   let { id } = useParams();
   const [offer, setOffer] = useState({})
@@ -43,7 +42,7 @@ const getDate = (date)=>{
       {
         ok ?
           <div className="offer">
-                        {offer.accepted_by ? <div className="msg-top">L'offre a déja été acceptée</div>: null}
+            {offer.accepted_by ? <div className="msg-top">L'offre a déja été acceptée</div> : null}
 
             <div className="offer-top">
               <img src="/image/aide.jpeg" alt="" />
@@ -57,16 +56,15 @@ const getDate = (date)=>{
             <div className="offer-bottom">
               <div className="offer-description">
                 <h3>Description</h3>
-              <div className="description-offer">
-                <p>{offer.description}</p>
-              </div>
+                <div className="description-offer">
+                  <p>{offer.description}</p>
+                </div>
               </div>
               <div className="offer-btn">
                 <button><NavLink to="/recherche">Retour</NavLink></button>
                 {accepted ? <Navigate to="/recherche" /> : null}
-                {offer.accepted_by ? null: <button onClick={acceptOffer}>Accepter</button>}
+                {offer.accepted_by ? null : <button onClick={acceptOffer}>Accepter</button>}
               </div>
-
             </div>
           </div>
           : null
@@ -75,4 +73,6 @@ const getDate = (date)=>{
   )
 }
 export default VoirPlus
+
+
 
