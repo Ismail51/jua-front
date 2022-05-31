@@ -38,7 +38,7 @@ export default function Recherche() {
                     <div className="search-div">
                         <label htmlFor="lists">Liste des Offres</label>
                             <select onChange={search} id="lists">
-                            <option  disabled selected value>Rechercher</option>
+                            <option  disabled selected value>Recherche</option>
                             <option value="tout">Tout</option>
                             <option value="menage">Ménage</option>
                             <option value="demenagement">Déménagement</option>

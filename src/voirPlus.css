@@ -68,10 +68,10 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    height: 40px;
-    width: 450px;
-    font-size: 20px;
-    background-color: #0c181f;
+    height: 35px;
+    width: 80px;
+    font-size: 15px;
+    /* background-color: #0c181f; */
 }
 
 

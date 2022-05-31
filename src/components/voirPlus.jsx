@@ -62,7 +62,7 @@ function VoirPlus() {
               <div className="offer-btn">
                 <button><NavLink to="/recherche">Retour</NavLink></button>
                 {accepted ? <Navigate to="/recherche" /> : null}
-                {offer.accepted_by ? null : <button onClick={acceptOffer}>Accepter</button>}
+              {offer.accepted_by ? null: <button onClick={acceptOffer}>Accepter</button> }
               </div>
             </div>
           </div>

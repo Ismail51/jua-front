@@ -66,6 +66,7 @@
     margin-right: 60px;
     margin-left: 60px;
     border-radius: 120px;
+    border: 1px solid  hsl(201, 100%, 22%);
 }
 .card-info{
     width: 70%;
