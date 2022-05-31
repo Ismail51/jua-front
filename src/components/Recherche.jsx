@@ -36,14 +36,13 @@ export default function Recherche() {
             <Navbar/>
                 <div className="search">
                     <div className="search-div">
-                        <label htmlFor="lists">Liste des taches</label>
+                        <label htmlFor="lists">Liste des Offres</label>
                             <select onChange={search} id="lists">
                             <option  disabled selected value>Rechercher</option>
                             <option value="tout">Tout</option>
                             <option value="menage">Ménage</option>
                             <option value="demenagement">Déménagement</option>
                             <option value="informatique">Informatique</option>
-                            <option value="accompagne">Accompagnement</option>
                             <option value="bricolage">Bricolage</option>
                             <option value="transport">Transport</option>
                             <option value="course">Course</option>
@@ -52,16 +51,16 @@ export default function Recherche() {
                     {
                     ok ?
                         <div>
+                            <div className="container">
                             <div className="div-option">
                                 <h3>{offers.length} {offers.length > 1 ? "Offres" : "Offre"} </h3>
                             </div>
-                            <div className="container">
 
                                 {
                                     offers.map(offer => {
                                         return (
                                             <div className="card-body">
-                                                <img src="./image/jean.jpg" alt="profile" />
+                                                <img src="/image/aide.jpeg" alt="profile" />
                                                 <div className="card-info">
                                                     <h3>{offer.created_by.firstname} {offer.created_by.lastname}</h3>
                                                     <h4>{offer.offerType}-{offer.duration} heures</h4>

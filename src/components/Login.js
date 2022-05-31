@@ -23,11 +23,20 @@ export default function Login() {
     return (
         <>
             {context.log ? <Navigate to="/" /> : null}
-            <form onSubmit={submitHandler}>
-                <input type="text" name="email" placeholder="Email"></input>
-                <input type="password" name="pass2" placeholder="Confirmez le mot de passe"></input>
-                <input type="submit"></input>
-            </form>
+               <form onSubmit={submitHandler}>
+                    <div className="container">
+                        <label htmlFor="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="email" required/>
+
+                        <label htmlFor="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="pass2" required/>
+
+                        <button type="submit">Login</button>
+                        <label>
+                        <input type="checkbox" checked="checked" name="remember"/>
+                        </label>
+                    </div>
+               </form>
         </>
 
     )

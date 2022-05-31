@@ -19,14 +19,15 @@ function Navbar() {
           <li className="hover"><NavLink to="/form">Nouvelle offre</NavLink></li>
         </ul>
         <div className="profile">
-          <div>
-            <img src={"/image/" + context.user.profile_picture} alt="profile" />
+            <div>
+              <img src="/image/aidant.jpeg" alt="profile" />
+            </div>
+            <div id="profile">
+              <h2>{context.user.firstname} {context.user.lastname}</h2>
+              <p>Points: {context.user.points}</p>
+            </div>
           </div>
-          <div id="profile">
-            <h2>{context.user.firstname} {context.user.lastname}</h2>
-            <p>Points: {context.user.points}</p>
-          </div>
-        </div>
+     
       </nav>
     </>
   )

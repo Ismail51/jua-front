@@ -1,11 +1,11 @@
 .section-body {
     display: flex;
-    margin-left: 320px;
+    margin-left: 300px;
 }
-
-.section-left {
+/* 
+.section-left{
     margin-left: 100px;
-}
+} */
 
 .section-left img {
     height: 100px;
@@ -16,8 +16,8 @@
     border-radius: 90px;
 }
 
-.section-right {
-    margin-left: 90px;
+.section-right{
+    margin-left: 100px;
     width: 1000px;
 }
 
@@ -102,10 +102,10 @@
     .seperator {
         display: none;
     }
-
-    .section-right {
-        display: block;
-        width: 100%;
+    .section-right{
+       display: block;
+        width: 100%; 
+        margin-top: 150px;
     }
 
     .div-left {
@@ -118,5 +118,20 @@
         display: block;
     }
 }
+@media screen and (max-width: 760px){
+    .section-right{
+        margin-left: 0;
+    }
+    .section-right h1{
+        text-align: center;
+    }
+  
+}
 
-@media screen and (max-width: 1122px) {}
+
+.accepted{
+    border-left:5PX solid #003450
+}
+.pasaccepted{
+    border-left:5PX solid #eeb711
+}

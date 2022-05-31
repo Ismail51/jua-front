@@ -36,8 +36,8 @@ useEffect(() => {
                   ok?
                         offers.map(offer=>{
                             return(
-                                <div className="card-body">
-                                <img src="./image/jean.jpg" alt="profile"/>
+                                <div className={offer.accepted_by?'accepted card-body':'pasaccepted card-body'}>
+                                <img src="/image/aidant.jpeg" alt="profile"/>
                                 <div className="card-left">
                                     <h3>{offer.created_by.firstname} {offer.created_by.lastname}</h3>
                                     <h4>{offer.offerType}-{offer.duration} heures</h4>
