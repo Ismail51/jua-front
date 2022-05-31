@@ -22,7 +22,7 @@ export default function Login() {
 
     return (
         <>
-            {context.log ? <Navigate to="/" /> : null}
+            {context.log ? <Navigate to="/recherche" /> : null}
                <form onSubmit={submitHandler}>
                     <div className="container">
                         <label htmlFor="uname"><b>Username</b></label>
