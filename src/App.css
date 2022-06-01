@@ -69,8 +69,9 @@ body{
 }
 
 .profile {
+    flex-direction: column;
     display: flex;
-    margin-top: 30%;
+    margin-top: 40%;
     line-height: 30px;
 }
 
@@ -78,7 +79,6 @@ body{
     height: 140px;
     width: 140px;
     border-radius: 120px;
-    margin-left: 30px;
 }
 /* .profile p{
     padding-left: 20px;
