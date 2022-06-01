@@ -135,3 +135,7 @@
 .pasaccepted{
     border-left:5PX solid #eeb711
 }
+
+.active{
+    border-bottom:2px solid #eeb711 !important;
+}

@@ -14,7 +14,12 @@ function Navbar() {
           <h1>Juste une aide</h1>
         </div>
         <ul>
-          <li className="hover"><NavLink to="/recherche">Recherche</NavLink></li>
+          <li className="hover">
+            <NavLink 
+            to="/recherche"
+            className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+            >Recherche</NavLink>
+          </li>
           <li className="hover"><NavLink to="/Offres">Mes annonces</NavLink></li>
           <li className="hover"><NavLink to="/history">Mon Historique</NavLink></li>
           <li className="hover"><NavLink to="/form">Nouveau besoin</NavLink></li>
