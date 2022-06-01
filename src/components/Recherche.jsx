@@ -40,7 +40,7 @@ export default function Recherche() {
                             <select onChange={search} id="lists">
                             <option  disabled selected value>Recherche</option>
                             <option value="tout">Tout</option>
-                            <option value="menage">Ménage</option>
+                            <option value="menage">Service à domicile</option>
                             <option value="demenagement">Déménagement</option>
                             <option value="informatique">Informatique</option>
                             <option value="bricolage">Bricolage</option>
