@@ -39,10 +39,13 @@ export default function Login() {
         
         <div class="login-section">
             <div className="login-form">
-            <h3>Connexion - JUA</h3>
+                <div className="login-top">
+                    <img src="/image/logo/logo.png"/>
+                    <h3>Connexion</h3>
+                </div>
             <form method="post" name="mainform"  onSubmit={submitHandler}  class="form-horizontal" >
-                <input type="text" placeholder="Entrez votre adresse e-mail" name="email" required/>
-                <input type="password" placeholder="Entrez votre mot de passe" name="pass2" required/>
+                <input type="text" placeholder="Adresse e-mail" name="email" required/>
+                <input type="password" placeholder="Mot de passe" name="pass2" required/>
                 <input class="bouton-ok" type="submit" value="Connexion"/>
             </form>
             <p>Vous avez perdu votre mot de passe ? <a href="#">Mot de passe oublié</a></p>    
