@@ -32,7 +32,7 @@ export default function Form() {
     <div className="main-div">
         <Navbar/>
         <div className="container-form">
-          <h1>Créer une nouvelle offre</h1>
+          <h1>Créer une nouvelle annonce</h1>
           {created?<Navigate to={`/VoirPlus/${idOffer}`}/>:null}
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="service">Service</label>

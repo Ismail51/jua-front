@@ -71,8 +71,7 @@ body{
 .profile {
     display: flex;
     margin-top: 30%;
-    
-
+    line-height: 30px;
 }
 
 .profile img {
@@ -81,9 +80,9 @@ body{
     border-radius: 120px;
     margin-left: 30px;
 }
-.profile p{
+/* .profile p{
     padding-left: 20px;
-}
+} */
 
 .search{
     width: 80%;
