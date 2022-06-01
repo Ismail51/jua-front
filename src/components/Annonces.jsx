@@ -31,7 +31,7 @@ useEffect(() => {
                 </div> */}
             </div>
             <div className="section-right">
-                <h1>Mes annonces</h1>
+                <h2 className="top-title">Mes annonces</h2>
                 {
                   ok?
                         offers.map(offer=>{

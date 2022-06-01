@@ -2,7 +2,7 @@ import axios from "axios"
 import { useContext, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { AppContext } from '../App'
-
+import '../loginpage.css'
 export default function Login() {
     const context = useContext(AppContext)
     const submitHandler = (e) => {
@@ -23,20 +23,32 @@ export default function Login() {
     return (
         <>
             {context.log ? <Navigate to="/recherche" /> : null}
-               <form onSubmit={submitHandler}>
+               {/* <form onSubmit={submitHandler}>
                     <div className="container">
                         <label htmlFor="uname"><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" name="email" required/>
 
                         <label htmlFor="psw"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="pass2" required/>
-
                         <button type="submit">Login</button>
                         <label>
                         <input type="checkbox" checked="checked" name="remember"/>
                         </label>
                     </div>
-               </form>
+               </form> */}
+        
+        <div class="login-section">
+            <div className="login-form">
+            <h3>Connexion - JUA</h3>
+            <form method="post" name="mainform"  onSubmit={submitHandler}  class="form-horizontal" >
+                <input type="text" placeholder="Entrez votre adresse e-mail" name="email" required/>
+                <input type="password" placeholder="Entrez votre mot de passe" name="pass2" required/>
+                <input class="bouton-ok" type="submit" value="Connexion"/>
+            </form>
+            <p>Vous avez perdu votre mot de passe ? <a href="#">Mot de passe oublié</a></p>    
+            </div>
+        </div>
+
         </>
 
     )

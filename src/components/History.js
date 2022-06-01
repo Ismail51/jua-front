@@ -22,7 +22,7 @@ function History() {
       <Navbar></Navbar>
       <div className="section-body" >
         <div className="section-right">
-          <h1>Historique des offres acceptées</h1>
+          <h2 className="top-title" >Historique des offres acceptées</h2 >
           {
             ok ?
               offers.map(offer => {

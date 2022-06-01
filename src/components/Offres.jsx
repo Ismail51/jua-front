@@ -32,7 +32,7 @@ useEffect(() => {
             </div>
             <div className="separator"></div>
             <div className="section-right">
-                <h1>Offres active</h1>
+                <h2>Offres active</h2>
                 {
                   ok?
                         offers.map(offer=>{
