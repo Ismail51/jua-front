@@ -40,7 +40,7 @@ useEffect(() => {
                                     <img src={"/image/"+offer.created_by.profile_picture} alt="profile" />
                                 <div className="card-left">
                                     <h3>{offer.created_by.firstname} {offer.created_by.lastname}</h3>
-                                    <h4>{offer.offerType}-{offer.duration} heures</h4>
+                                    <h4>{offer.offerType} - {offer.duration} heures</h4>
                                     <p>“{offer.description}”</p>
                                     <div className="btn">
                                         <button><NavLink to={`/voirPlus/${offer._id}`}>Voir plus</NavLink></button>
