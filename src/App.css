@@ -159,3 +159,13 @@ body{
         line-height: 100px;
     }
 }
+
+
+.card-body h4{
+    background-color: rgb(218, 218, 218);
+    border-radius: 30px;
+    width:250px;
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+}

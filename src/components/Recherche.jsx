@@ -36,7 +36,7 @@ export default function Recherche() {
             <Navbar/>
                 <div className="search">
                     <div className="search-div">
-                        <label htmlFor="lists">Liste des Offres</label>
+                        <label htmlFor="lists">Liste des services</label>
                             <select onChange={search} id="lists">
                             <option  disabled selected value>Recherche</option>
                             <option value="tout">Tout</option>

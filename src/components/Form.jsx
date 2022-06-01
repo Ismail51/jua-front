@@ -32,13 +32,13 @@ export default function Form() {
     <div className="main-div">
         <Navbar/>
         <div className="container-form">
-          <h1>Créer une nouvelle annonce</h1>
+          <h1>Publier un nouveau besoin</h1>
           {created?<Navigate to={`/VoirPlus/${idOffer}`}/>:null}
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="service">Service</label>
                 <select {...register('service', {required: 'You need to enter the description' })} id="service" name="service">
                 <option  disabled value> -- Selectionner  -- </option>
-                            <option value="menage">Ménage</option>
+                            <option value="menage">Service à domicile</option>
                             <option value="demenagement">Déménagement</option>
                             <option value="informatique">Informatique</option>
                             <option value="bricolage">Bricolage</option>
