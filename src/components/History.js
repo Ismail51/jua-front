@@ -11,7 +11,7 @@ function History() {
 
   useEffect(() => {
     console.log(`http://localhost:3002/offers/history/${context.user._id}`)
-    axios.get(`http://localhost:3002/offers/history/${context.user._id}`).then(data => {
+    axios.get(`https://jua-back.herokuapp.com/offers/history/${context.user._id}`).then(data => {
       console.log(data);
       setOffers(data.data);
       setOk(true)

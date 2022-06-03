@@ -20,7 +20,7 @@ export default function Form() {
           duration:data.duration,
           is_active : true
         }
-        axios.post("http://localhost:3002/offers", newOffer).then(info => {
+        axios.post("https://jua-back.herokuapp.com/offers", newOffer).then(info => {
           console.log(info.data._id)
           if(info.status ===200){
             setCreated(true)

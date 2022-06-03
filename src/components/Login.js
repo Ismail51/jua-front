@@ -12,7 +12,7 @@ export default function Login() {
             mail: data[0].value,
             password: data[1].value,
         }
-        axios.post('http://localhost:3002/register/auth/login',
+        axios.post('https://jua-back.herokuapp.com/register/auth/login',
             log,
         ).then(result => {
             console.log(result)

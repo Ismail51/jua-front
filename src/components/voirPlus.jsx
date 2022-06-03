@@ -15,7 +15,7 @@ function VoirPlus() {
   const context = useContext(AppContext)
   useEffect(() => {
     console.log(context.user)
-    axios.get(`http://localhost:3002/offers/${id}`).then(data => {
+    axios.get(`https://jua-back.herokuapp.com/offers/${id}`).then(data => {
       setOffer(data.data)
       setOk(true)
       console.log(data)
@@ -25,7 +25,7 @@ function VoirPlus() {
   const acceptOffer = (e) => {
     e.preventDefault()
     console.log("ok", context.user._id)
-    axios.put(`http://localhost:3002/offers/${id}`, { accepted_by: context.user._id }).then(ok => {
+    axios.put(`https://jua-back.herokuapp.com/offers/${id}`, { accepted_by: context.user._id }).then(ok => {
       console.log(ok)
       setAccepted(true)
     })

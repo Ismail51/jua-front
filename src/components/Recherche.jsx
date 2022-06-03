@@ -13,7 +13,7 @@ export default function Recherche() {
     }, [])
 
     const getAlloffers = () => {
-        axios.get('http://localhost:3002/offers').then(data => {
+        axios.get('https://jua-back.herokuapp.com/offers').then(data => {
             setOffers(data.data)
             setOk(true)
         })
@@ -25,7 +25,7 @@ export default function Recherche() {
         }
         else {
             console.log("sfvsd", e.target.value);
-            axios.get(`http://localhost:3002/offers/type/${e.target.value}`).then(data => {
+            axios.get(`https://jua-back.herokuapp.com/offers/type/${e.target.value}`).then(data => {
                 setOffers(data.data)
             })
         }

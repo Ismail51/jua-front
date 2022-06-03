@@ -19,7 +19,7 @@ export default function(){
                 points : 0,
                 password:data[3].value,
             }
-            axios.post('http://localhost:3002/register/',
+            axios.post('https://jua-back.herokuapp.com/register/',
             newUser,    
             ).then(result=>{
                 console.log(result)
