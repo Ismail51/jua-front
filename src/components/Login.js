@@ -15,10 +15,11 @@ export default function Login() {
         axios.post('https://jua-back.herokuapp.com/register/auth/login',
             log,
         ).then(result => {
-            console.log(result)
+            console.log(result, "ok")
             context.logUser(result.data)
         })
     }
+  
 
     return (
         <>
@@ -56,3 +57,6 @@ export default function Login() {
 
     )
 }
+
+
+
